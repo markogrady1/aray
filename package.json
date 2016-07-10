@@ -1,0 +1,24 @@
+{
+  "name": "arrayerJS",
+  "description": "Array manipulation library.",
+  "main": "lib/arrayer.js",
+  "author": {
+    "name": "Mark O Grady"
+  },
+  "version": "0.1.0",
+  "keywords": [
+    "array",
+    "array manipulation",
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markogrady1/arrayer.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+
+  },
+  "scripts": {
+
+  }
+}
