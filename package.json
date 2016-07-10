@@ -1,24 +1,23 @@
 {
-  "name": "arrayerJS",
+  "name": "arayJS",
   "description": "Array manipulation library.",
-  "main": "lib/arrayer.js",
+  "main": "index.js",
   "author": {
     "name": "Mark O Grady"
   },
   "version": "0.1.0",
   "keywords": [
     "array",
-    "array manipulation",
+    "array manipulation"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markogrady1/arrayer.git"
+    "url": "git+https://github.com/markogrady1/aray.git"
   },
   "license": "MIT",
   "devDependencies": {
-
-  },
-  "scripts": {
-
+    "chai": "^3.5.0",
+    "mocha": "^2.2.4",
+    "should": "^5.2.0"
   }
 }

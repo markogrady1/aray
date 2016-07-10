@@ -2,7 +2,6 @@
 
 var aray = module.exports = {};
 
-
 /**
  * Creates a multidimensional array matrix from given values
  *
@@ -23,6 +22,22 @@ aray.matrix = function(numrows, numcols, initial) {
 	return arr;
 };
 
+/**
+ * Returns the unique values of a given array
+ *
+ * @param {Array} arr
+ * @returns {Array}
+ */
+aray.unique = function(arr) {
+	_arrayCheck(arr);
+	var res = [];
+	for (var i = 0; i < arr.length; i++) {
+		if (res.indexOf(arr[i]) === -1) {
+			res.push(arr[i]);
+		}
+	}
+	return res;
+};
 
 /**
  * Divides an array into multidimensional sections of a given size
