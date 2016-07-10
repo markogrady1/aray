@@ -5,16 +5,16 @@ var aray = module.exports = {};
 /**
  * Creates a multidimensional array matrix from given values
  *
- * @param {Number} numrows
- * @param {Number} numcols
+ * @param {Number} rows
+ * @param {Number} cols
  * @param {*} initial
  * @returns {Array}
  */
-aray.matrix = function(numrows, numcols, initial) {
+aray.matrix = function(rows, cols, initial) {
 	var arr = [];
-	for (var i = 0; i < numrows; ++i) {
+	for (var i = 0; i < rows; ++i) {
 		var columns = [];
-		for (var j = 0; j < numcols; ++j) {
+		for (var j = 0; j < cols; ++j) {
 			columns[j] = initial;
 		}
 		arr[i] = columns;
