@@ -5,8 +5,8 @@ var aray = module.exports = {};
 /**
  * Creates a multidimensional array matrix from given values
  *
- * @param {Number} rows
- * @param {Number} cols
+ * @param {number} rows
+ * @param {number} cols
  * @param {*} initial
  * @returns {Array}
  */
