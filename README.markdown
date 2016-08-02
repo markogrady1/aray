@@ -8,7 +8,7 @@ $ npm install aray --save
 
 ####Usage 
 ```javascript
-var aray = require("aray");
+ var aray = require("aray");
 
  var result = aray.addEach([1, 3, 5], 4);		
  console.log(result); 
