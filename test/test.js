@@ -54,4 +54,22 @@ describe('Aray', function() {
 			assert.deepEqual([ 5, 2, 3],  aray.unique([5, 2, 3, 5, 5, 5, 2, 5, 5, 3]));
 		});
 	});
+
+	describe('words()', function() {
+		it('should return [ "my", "name", "is", "mark"]', function() {
+			assert.deepEqual([ "my", "name", "is", "mark"],  aray.words("my name is mark"));
+		});
+	});
+
+	describe('nums()', function() {
+		it('should return [ 5, 2, 3, 23, 11]', function() {
+			assert.deepEqual([ 5, 2, 3, 23, 11],  aray.nums("5 2 3 23 11"));
+		});
+	});
+	
+	describe('mix()', function() {
+		it("should return [ 'my', 5, 'name', 2, 'mark', 3]", function() {
+			assert.deepEqual([ "my", 5, "name", 2, "mark", 3],  aray.mix("my 5 name 2 mark 3"));
+		});
+	});
 });

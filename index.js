@@ -1,6 +1,15 @@
 "use strict";
 
-var aray = module.exports = {};
+var aray;
+
+if (typeof exports != 'undefined' && !exports.nodeType) {
+	if (typeof module != 'undefined' && !module.nodeType && module.exports) {
+        exports = module.exports = aray = {};
+    }
+	exports.aray = aray;	
+ } else {
+	aray = {};
+}
 
 /**
  * Creates a multidimensional array matrix from given values
@@ -146,6 +155,46 @@ aray.popFirst = function(arr) {
 	return arr
 };
 
+/**
+ * Return an array of strings from a given string
+ *
+ * @param {String} str
+ * @returns {Array}
+ */
+aray.words = function(str) {
+	var wordArr = str.split(/\s+/);
+	return wordArr;
+}
+
+/**
+ * Return an array of numbers from a given string
+ *
+ * @param {String} numbers
+ * @returns {Array}
+ */
+aray.nums = function(numbers) {
+	var arr = numbers.split(/\s+/);
+	var numArr = arr.map((item) => {
+		return parseInt(item);		
+	});
+	return numArr;
+}
+
+/**
+ * Returns a mixed array from a given string
+ *
+ * @param {String} mixedStr
+ * @returns {Array}
+ */
+aray.mix = function(mixedStr) {
+	var arr = mixedStr.split(/\s+/);
+	var mxArr = arr.map((item) => {
+		return !isNaN(parseInt(item)) ? parseInt(item) : item;	
+	});
+	return mxArr;
+}
+
+
 function _action(param, param2) {
 	var isSpread = false;
 	var length = param.length;
@@ -159,6 +208,7 @@ function _action(param, param2) {
 
 	return param;
 }
+
 
 function _exceptionCheck(value, expected) {
 	if(typeof value != expected)
