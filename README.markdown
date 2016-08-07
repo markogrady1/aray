@@ -1,6 +1,8 @@
 # aray
 A personal array manipulation library.
 
+[![Build Status](https://travis-ci.org/markogrady1/aray.svg?branch=master)](https://travis-ci.org/markogrady1/aray)
+
 ####Installation
 ````bash
 $ npm install aray --save
