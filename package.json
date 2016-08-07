@@ -10,6 +10,9 @@
     "array",
     "array manipulation"
   ],
+   "scripts": {
+    "test": "mocha test/*.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/markogrady1/aray.git"
