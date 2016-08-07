@@ -20,6 +20,7 @@ if (typeof exports != 'undefined' && !exports.nodeType) {
  * @returns {Array}
  */
 aray.matrix = function(rows, cols, initial) {
+	_checkNumber([rows, cols, initial]);
 	var arr = [];
 	for (var i = 0; i < rows; ++i) {
 		var columns = [];
@@ -57,6 +58,7 @@ aray.unique = function(arr) {
  */
 aray.divide = function(arr, size) {
 	_arrayCheck(arr);
+	_exceptionCheck(size, "number");
 	var newArr = [];
 	var section = [];
 	for (var i = 0; i < arr.length; i++) {
@@ -69,7 +71,7 @@ aray.divide = function(arr, size) {
 	return newArr;
 };
 
-/**
+/*
  * Add amount to each element of a given array
  *
  * @param {Array} arr
@@ -78,6 +80,7 @@ aray.divide = function(arr, size) {
  */
 aray.addEach = function(arr, amount) {
 	_arrayCheck(arr);
+	_exceptionCheck(amount, "number");
 	arr = _action(arr, amount);
 	return arr;
 };
@@ -134,6 +137,7 @@ aray.sum = function(arr) {
  */
 aray.first = function(arr, value) {
 	_arrayCheck(arr);
+	_exceptionCheck(value, "number");
 	for (var i = arr.length; i >= 0; --i) {
 		arr[i] = arr[i-1];
 	}
@@ -162,6 +166,7 @@ aray.popFirst = function(arr) {
  * @returns {Array}
  */
 aray.words = function(str) {
+	_exceptionCheck(str, "string");
 	var wordArr = str.split(/\s+/);
 	return wordArr;
 }
@@ -194,7 +199,6 @@ aray.mix = function(mixedStr) {
 	return mxArr;
 }
 
-
 function _action(param, param2) {
 	var isSpread = false;
 	var length = param.length;
@@ -209,6 +213,17 @@ function _action(param, param2) {
 	return param;
 }
 
+/**
+ * This section below is responsible for checking the parameters for all functions
+ *///////////////////////////////////////////////////////////////////////////////////
+function _checkNumber(valueArr) {
+	_arrayCheck(valueArr);
+	for(var i = 0; i < valueArr.length; i++) {
+		if(typeof valueArr[i] != "number") {
+			throw new TypeError("Number expected. Not provided");
+		}
+	}
+}
 
 function _exceptionCheck(value, expected) {
 	if(typeof value != expected)

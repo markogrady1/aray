@@ -2,7 +2,6 @@ require('should')
 var assert = require('chai').assert;
 var aray = require('../');
 describe('Aray', function() {
-
 	describe('addEach()', function() {
 		it('should return [ 5, 7, 9 ]', function() {
 			assert.deepEqual([ 5, 7, 9 ], aray.addEach([1, 3, 5], 4));
