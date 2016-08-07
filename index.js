@@ -179,7 +179,7 @@ aray.words = function(str) {
  */
 aray.nums = function(numbers) {
 	var arr = numbers.split(/\s+/);
-	var numArr = arr.map((item) => {
+	var numArr = arr.map(function(item) {
 		return parseInt(item);		
 	});
 	return numArr;
@@ -193,7 +193,7 @@ aray.nums = function(numbers) {
  */
 aray.mix = function(mixedStr) {
 	var arr = mixedStr.split(/\s+/);
-	var mxArr = arr.map((item) => {
+	var mxArr = arr.map(function(item) {
 		return !isNaN(parseInt(item)) ? parseInt(item) : item;	
 	});
 	return mxArr;
